@@ -8,6 +8,11 @@ import (
 type Solution struct {
 }
 
+type Point struct {
+	X int
+	Y int
+}
+
 func toLines(fn string) (r []string) {
 	s := toString(fn)
 	return strings.Split(s, "\n")
