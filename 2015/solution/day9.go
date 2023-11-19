@@ -39,7 +39,7 @@ func (Solution) Day9Part1(fn string) int {
 		path[i] = i
 	}
 
-	p := permutations(path)
+	p := permutationsInt(path)
 
 	min_dist := math.MaxInt
 	for _, path := range p {
@@ -89,7 +89,7 @@ func (Solution) Day9Part2(fn string) int {
 		path[i] = i
 	}
 
-	p := permutations(path)
+	p := permutationsInt(path)
 
 	max_dist := math.MinInt
 	for _, path := range p {
