@@ -48,7 +48,6 @@ func (Solution) Day19Part2(fn string) int {
 			parts := strings.Split(line, " => ")
 			l := parts[0]
 			r := parts[1]
-
 			replacements[r] = l
 		}
 	}

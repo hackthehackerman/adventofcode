@@ -2,6 +2,7 @@ package solution
 
 import (
 	"os"
+	"reflect"
 	"strings"
 )
 
@@ -99,4 +100,26 @@ func permutationsString(arr []string) [][]string {
 	}
 	helper(arr, len(arr))
 	return res
+}
+
+func deepCopySlice[T any](original []T) []T {
+	copied := make([]T, len(original))
+	for i, v := range original {
+		// Use reflect to check if element is a struct and contains reference types
+		if reflect.ValueOf(v).Kind() == reflect.Struct {
+			// Handle struct with a custom deep copy logic specific to your structs
+			// This part is tricky and depends on your struct's structure
+		} else {
+			copied[i] = v
+		}
+	}
+	return copied
+}
+
+func deepCopyMap[K comparable, V any](original map[K]V) map[K]V {
+	copied := make(map[K]V)
+	for key, value := range original {
+		copied[key] = value
+	}
+	return copied
 }
