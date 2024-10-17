@@ -27,6 +27,5 @@ def part2():
         count += 1
     print(count)
         
-        
 part1()
 part2()
